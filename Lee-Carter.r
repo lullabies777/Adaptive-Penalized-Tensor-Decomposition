@@ -48,7 +48,7 @@ LC.predict <- function(X, n.pred, n.pc) {
     return(sweep(tmp$bx %*% kt.pred, 1, -tmp$rowmean))
 }
 
-lcforecast <- function(tnsr, n.pred, n.pc, year) {
+LC.forecast <- function(tnsr, n.pred, n.pc, year) {
     cs1 <- LC.predict(tnsr[1, , 1:(dim(tnsr)[3] - year)]@data, n.pred, n.pc)
     c1 <- LC.predict(tnsr[2, , 1:(dim(tnsr)[3] - year)]@data, n.pred, n.pc)
     rs1 <- LC.predict(tnsr[3, , 1:(dim(tnsr)[3] - year)]@data, n.pred, n.pc)
@@ -68,7 +68,7 @@ lcforecast <- function(tnsr, n.pred, n.pc, year) {
     return(as.tensor(m_tensor))
 }
 
-lcfit <- function(tnsr, n.pc, year) {
+LC.fit <- function(tnsr, n.pc, year) {
     cs1 <- LC(tnsr[1, , 1:(dim(tnsr)[3] - year)]@data, n.pc)$fitted
     c1 <- LC(tnsr[2, , 1:(dim(tnsr)[3] - year)]@data, n.pc)$fitted
     rs1 <- LC(tnsr[3, , 1:(dim(tnsr)[3] - year)]@data, n.pc)$fitted
@@ -91,7 +91,7 @@ lcfit <- function(tnsr, n.pc, year) {
 
 ################# cross_validation
 
-lccv <- function(tnsr, year, k = 5, leave_test = TRUE) {
+LC.cv <- function(tnsr, year, k = 5, leave_test = TRUE) {
     if (leave_test) {
         tnsr <- tnsr[, , 1:(dim(tnsr)[3] - year)]
     }
