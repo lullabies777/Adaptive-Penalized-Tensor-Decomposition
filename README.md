@@ -1,2 +1,2 @@
 # Adaptive Penalized Tensor Decomposition
- R codes for implementing APTD
+ This project contains the R codes to reproduce the results of our paper.
