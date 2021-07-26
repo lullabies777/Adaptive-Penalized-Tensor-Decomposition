@@ -1,4 +1,11 @@
-## lee-carter
+## --------------------
+## --------------------
+## --------------------
+## This file contains the functions for implementing the Lee-Carter Model. 
+## --------------------
+## --------------------
+## --------------------
+
 LC <- function(X, n.pc) {
 
     ## this function adopt codes from the demorgraphy package, X is the data matrix

@@ -1,7 +1,7 @@
 ## --------------------
 ## --------------------
 ## --------------------
-## These codes implement the MLR for short-term forecast(5 year). For mid-term, long-term or other dataset, these should be modified properly.
+## These codes implement the MLR for short-term forecast(5 year). For mid-term, long-term or other dataset, these should be modified adaptively.
 ## --------------------
 ## --------------------
 ## --------------------
