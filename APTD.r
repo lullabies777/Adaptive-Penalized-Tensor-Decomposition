@@ -12,6 +12,10 @@
 
 ## --------------------
 ## Generate tensor given d u v w.
+## d @list 
+## u @matrix
+## v @matrix
+## w @matrix
 ## --------------------
 generate_tensor <- function(d, u, v, w) {
     if (length(d) == 1) {
